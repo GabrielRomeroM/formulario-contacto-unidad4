@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Contacto</h1>
+    </header>
+    <main>
+        <form id="contactForm">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="Nombre*">
+            <span class="errormessage" id="error-name"></span>
+
+            <label for="surname"></label>
+            <input type="text" name="surname" id="surname" placeholder="Apellido*">
+            <span class="errormessage" id="error-surname"></span>
+
+            <label for="tel"></label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{9}" placeholder="Telefono 123-456-7890" title="Formato: 261-123-4567" >
+            <span class="errormessage" id="error-tel"></span>
+
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico*">
+            <span class="errormessage" id="error-email"></span>
+
+            <label for="contact">Tipo de Contacto*</label>
+            <select name="contact" id="contact">
+                <option value="">Seleccione una opción</option>
+                <option value="support">Soporte</option>
+                <option value="sales">Ventas</option>
+            </select>
+            <span class="errormessage" id="error-contact"></span>
+
+            <label for="affair"></label>
+            <input type="text" name="affair" id="affair" placeholder="Asunto*">
+            <span class="errormessage" id="error-affair"></span>
+
+            <label for="message"></label>
+            <textarea name="message" id="message" rows="5" placeholder="Mensaje*"></textarea>
+            <span class="errormessage" id="error-message"></span>
+            
+            <p>* Campos obligatorios</p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Formulario de Contacto. Todos los derechos reservados.</p>
+        <p>Desarrollado por Romero Gabriel</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

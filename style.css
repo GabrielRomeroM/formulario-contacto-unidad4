@@ -1,0 +1,172 @@
+:root {
+    --color-primary: #FF5722;       /* Naranja principal */
+    --color-error: #d9534f;         /* Rojo para errores */
+    --color-light: #f8f9fa;         /* Fondo claro */
+    --color-dark: #333;             /* Texto oscuro */
+    --color-border: #e0e0e0;        /* Borde inputs */
+    --border-radius: 4px;           /* Bordes menos redondeados */
+    --transition: all 0.3s ease;    /* Transición suave */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+/* Header destacado */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario minimalista */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Labels ocultos */
+label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Inputs estilo moderno con placeholders */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 1rem;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+/* Select personalizado */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem;
+}
+
+/* Efectos al enfocar */
+input:focus,
+select:focus,
+textarea:focus {
+    border-bottom-color: var(--color-primary);
+    outline: none;
+}
+
+/* Placeholders con estilo */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+/* Mensajes de error */
+.errormessage {
+    color: var(--color-error);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1rem;
+}
+
+/* Botones */
+button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+button[type="reset"] {
+    background-color: #f0f0f0;
+    color: var(--color-dark);
+}
+
+button[type="reset"]:hover {
+    background-color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-dark);
+    color: white;
+    margin-top: 3rem;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border: 1px solid #c3e6cb;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
